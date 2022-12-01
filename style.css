@@ -2,6 +2,7 @@
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 /* Banner Section */
@@ -131,6 +132,7 @@ article {
 
 .card {
   width: 300px;
+  margin: 10px;
   min-height: 300px;
   background: #ffff;
   border-radius: 5px;
@@ -148,7 +150,7 @@ article {
   padding: 8px 15px;
   border: none;
   border-radius: 5px;
-  width: 100%;
+  /* width: 100%; */
   margin-top: 10px;
 }
 
@@ -173,4 +175,111 @@ footer {
   text-align: center;
   min-height: 30px;
   margin-top: 32px;
+}
+
+/* Media query */
+/* Break points 768px, 1224px */
+/* min-width, max-width // <= , >= */
+/* @media (0 <= width <=768px) { */
+
+/* laptop */
+@media (max-width: 1224px) {
+  .posts {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .posts-content {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .side-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .country,
+  .date {
+    width: 45%;
+  }
+
+  .date {
+    margin-top: 0;
+  }
+
+  .card-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    width: 45%;
+  }
+}
+
+/* mobile screen */
+/* max width */
+@media (0 <= width <=768px) {
+  .global-msg {
+    display: none;
+  }
+
+  article {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: -3px 5px 10px 5px grey;
+  }
+
+  .art-img {
+    width: 100%;
+  }
+
+  .title {
+    margin: 1rem 0;
+  }
+
+  article p {
+    margin: 1rem 0;
+  }
+
+  .side-links {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .country,
+  .date {
+    width: 100%;
+    text-align: center;
+  }
+
+  .country {
+    margin-bottom: 1rem;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .card button {
+    width: 100%;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  form,
+  input {
+    width: 100%;
+  }
 }
